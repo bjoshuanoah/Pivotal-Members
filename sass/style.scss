@@ -1,4 +1,114 @@
-body {
-	background: #999;
-	color: #efefef;
+* {
+            box-sizing: border-box;
 }
+
+header#main_header {
+    height: 27px;
+}
+
+#user_columns {
+    width: 5000px;
+    .user_column {
+        width:330px;
+        display: none;
+        height:800px;
+        vertical-align:top;
+        &.active {
+            display: inline-block;
+        }
+        &:last-of-type {
+            float: none;
+        }
+        header {
+            text-align: center;
+            font-size: 22px;
+        }
+        .user_stories {
+            .user_story {
+                padding:5px;
+                margin: 2px;
+                background: #fff;
+                border:1px solid #efefef;
+                &[status="accepted"] {
+                    font-size: 12px;
+                    display: none;
+                }
+                &[status="rejected"] {
+                    background: lighten(#ff0000, 45%);
+                }
+                &[status="delivered"] {
+                    background: lighten(#00ff00, 45%);
+                }
+                &[status="finished"] {
+                    background: lighten(#ffff00, 30%);
+                }
+                &[status="started"] {
+                    background: lighten(#ffff00, 45%);
+                }
+                &[status="unstarted"] {
+                    opacity: .5;
+                    background: #999;
+                    color:#fff;
+                }
+                &[difficulty="1"] {
+                    min-height: 22px;
+                }
+                &[difficulty="2"] {
+                    min-height: 32px;
+                }
+                &[difficulty="3"] {
+                    min-height: 42px;
+                }
+                &[difficulty="4"] {
+                    min-height: 52px;
+                }
+                &[difficulty="5"] {
+                    min-height: 62px;
+                }
+                &[difficulty="6"] {
+                    min-height: 72px;
+                }
+                &[difficulty="7"] {
+                    min-height: 82px;
+                }
+                &[difficulty="8"] {
+                    min-height: 92px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
