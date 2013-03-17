@@ -1,9 +1,14 @@
 * {
   box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  background: #383838;
 }
 
 header#main_header {
-  height: 27px;
+  height: 55px;
 }
 
 #user_columns {
@@ -12,8 +17,10 @@ header#main_header {
 #user_columns .user_column {
   width: 330px;
   display: none;
-  height: 800px;
   vertical-align: top;
+  height: 630px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 3px;
 }
 #user_columns .user_column.active {
   display: inline-block;
@@ -24,12 +31,29 @@ header#main_header {
 #user_columns .user_column header {
   text-align: center;
   font-size: 22px;
+  color: #efefef;
+  position: absolute;
+  top: -25px;
+  width: 100%;
 }
 #user_columns .user_column .user_stories .user_story {
-  padding: 5px;
-  margin: 2px;
+  padding: 5px 5px 20px;
+  margin: 2px 0 2px;
   background: #fff;
   border: 1px solid #efefef;
+  display: block;
+  position: relative;
+}
+#user_columns .user_column .user_stories .user_story footer {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #999;
+  position: absolute;
+  bottom: 0;
+  height: 15px;
+  padding: 2px;
+  width: 100%;
+  left: 0;
 }
 #user_columns .user_column .user_stories .user_story[status="accepted"] {
   font-size: 12px;
