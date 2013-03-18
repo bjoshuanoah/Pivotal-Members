@@ -77,7 +77,7 @@ $.ajax({
                                                         status = story.current_state,
                                                         id = story.id;
                                                     $('#' + member).addClass('active');
-                                                    $('#' + member + ' .user_stories').append('<div id="' + id + '" class="user_story" difficulty="' + difficulty+ '" status="' + status+ '"><span>' + story_name + '</span><footer>Difficulty: ' + difficulty + '   Status: ' + status + '</footer></div>');
+                                                    $('#' + member + ' .user_stories').append('<div id="' + id + '" class="user_story" difficulty="' + difficulty+ '" status="' + status+ '"><span>' + story_name + '</span><footer>Difficulty: ' + difficulty + ' | Status: ' + status + ' | Id: <a href="https://www.pivotaltracker.com/story/show/' + id + '" target="_blank">' + id + '</a></footer></div>');
                                                 }
                                             }
                                         }
