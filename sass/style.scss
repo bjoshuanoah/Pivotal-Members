@@ -9,9 +9,11 @@ body {
 
 header#main_header {
     height: 55px;
+    color: #fff;
 }
 
 #user_columns {
+    display: none;
     width: 5000px;
     .user_column {
         width:330px;

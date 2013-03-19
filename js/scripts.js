@@ -2,14 +2,17 @@
 
 
 var api_token = '353ddbae79fe8b53ddb36fbe5f389e68';
-
+$('#main_header').text('loading page');
 $.ajax({
 	type: 'GET',
 	url: 'http://gentle-forest-6759.herokuapp.com/projects',
 	beforeSend: function(xhr){
 		xhr.setRequestHeader('api_token', api_token);
-	},
-	// datatype: 'json',
+        $('#main_header').text('Loading Projects');
+    },
+    // datatype: 'json',
+    progress:function (p) {
+    },
 	error: function (e) {
 		console.log('error', e);
 		console.log(e.responseText);
@@ -26,8 +29,11 @@ $.ajax({
 	url: 'http://gentle-forest-6759.herokuapp.com/members',
 	beforeSend: function(xhr){
 		xhr.setRequestHeader('api_token', api_token);
-	},
-	// datatype: 'json',
+        $('#main_header').text('Loading Members');
+    },
+    // datatype: 'json',
+    progress:function (p) {
+    },
 	error: function (e) {
 		console.log('error', e);
 		console.log(e.responseText);
@@ -49,6 +55,9 @@ $.ajax({
             url: 'http://gentle-forest-6759.herokuapp.com/current_iterations',
             beforeSend: function(xhr){
                 xhr.setRequestHeader('api_token', api_token);
+                $('#main_header').text('Loading Stories');
+            },
+            progress:function (p) {
             },
             error: function (e) {
                 console.log('error', e);
@@ -83,6 +92,8 @@ $.ajax({
                         }
                     }
                 }
+                $('#user_columns').fadeIn('slow');
+                $('#main_header').text('');
             }
         });
 	}
