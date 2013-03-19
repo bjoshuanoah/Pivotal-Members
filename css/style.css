@@ -7,6 +7,37 @@ body {
   background: #383838;
 }
 
+#status_message {
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+}
+#status_message .connection_status {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -75px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 18px;
+  padding-top: 6px;
+  border-left: 1px solid #444444;
+  border-right: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+  -webkit-transition: top 0.3s;
+  -moz-transition: top 0.3s;
+  -o-transition: top 0.3s;
+  transition: top 0.3s;
+  border-radius: 0 0 3px 3px;
+}
+#status_message .connection_status:empty {
+  top: -30px;
+}
+
 header#main_header {
   height: 55px;
   color: #fff;
